@@ -10,14 +10,16 @@ import Iconify from '../../../components/Iconify';
 
 const RootStyle = styled(Card)(({ theme }) => ({
   boxShadow: 'none',
-  textAlign: 'center',
-  padding: theme.spacing(5, 0),
+  // textAlign: 'center',
+  padding: theme.spacing(5, 5),
   color: theme.palette.primary.darker,
   backgroundColor: theme.palette.primary.lighter
+  // justifyContent: 'flex-start',
+  // alignItems: 'flex-start'
 }));
 
 const IconWrapperStyle = styled('div')(({ theme }) => ({
-  margin: 'auto',
+  // margin: 'auto',
   display: 'flex',
   borderRadius: '50%',
   alignItems: 'center',
@@ -34,18 +36,17 @@ const IconWrapperStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-const TOTAL = 714000;
+// const TOTAL = 714000;
 
-export default function AppWeeklySales() {
+export default function CardDashboard({ title = '', sum = 0 }) {
   return (
     <RootStyle>
       <IconWrapperStyle>
         <Iconify icon="ant-design:android-filled" width={24} height={24} />
       </IconWrapperStyle>
-      <Typography variant="h3">{fShortenNumber(TOTAL)}</Typography>
-      <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
-        Weekly Sales
-      </Typography>
+      {/* <Typography variant="body2">{fShortenNumber(TOTAL)}</Typography> */}
+      <Typography variant="body1">{title}</Typography>
+      <Typography variant="h1">{sum}</Typography>
     </RootStyle>
   );
 }
