@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 // component
+import { blue } from '@mui/material/colors';
 import Iconify from '../../../components/Iconify';
 
 // ----------------------------------------------------------------------
@@ -81,21 +82,40 @@ export default function LoginForm() {
 
         <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ my: 2 }}>
           <FormControlLabel
-            control={<Checkbox {...getFieldProps('remember')} checked={values.remember} />}
+            control={
+              <Checkbox
+                {...getFieldProps('remember')}
+                checked={values.remember}
+                sx={{
+                  color: blue[600],
+                  '&.Mui-checked': {
+                    color: blue[600]
+                  }
+                }}
+              />
+            }
             label="Remember me"
           />
 
-          <Link component={RouterLink} variant="subtitle2" to="#" underline="hover">
+          <Link
+            sx={{ color: blue[600] }}
+            component={RouterLink}
+            variant="subtitle2"
+            to="#"
+            underline="hover"
+          >
             Forgot password?
           </Link>
         </Stack>
 
         <LoadingButton
+          sx={{ bgcolor: blue[600], boxShadow: 2 }}
           fullWidth
           size="large"
           type="submit"
           variant="contained"
           loading={isSubmitting}
+          loadingIndicator
         >
           Login
         </LoadingButton>

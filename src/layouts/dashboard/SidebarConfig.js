@@ -8,28 +8,28 @@ const getIcon = (name) => <Iconify icon={name} width={22} height={22} />;
 const sidebarConfig = [
   {
     title: 'Home',
-    path: '/dashboard/app',
-    icon: getIcon('eva:pie-chart-2-fill')
+    path: '/dashboard',
+    icon: getIcon('bx:home')
   },
   {
     title: 'Catch a Pokemon',
-    path: '/dashboard/user',
-    icon: getIcon('eva:people-fill')
+    path: '/catch',
+    icon: getIcon('ic:twotone-catching-pokemon')
   },
   {
     title: 'My Pokemons',
-    path: '/dashboard/products',
+    path: '/mypoke',
     icon: getIcon('eva:shopping-bag-fill')
   },
   {
     title: 'My Profile',
-    path: '/dashboard/blog',
-    icon: getIcon('eva:file-text-fill')
+    path: '/profile',
+    icon: getIcon('healthicons:ui-user-profile-outline')
   },
   {
     title: 'Shop',
-    path: '/login',
-    icon: getIcon('eva:lock-fill')
+    path: '/shop',
+    icon: getIcon('iconoir:small-shop-alt')
   }
   // {
   //   title: 'register',

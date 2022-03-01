@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // material
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
+import { Box, Stack, AppBar, Toolbar, IconButton, Typography } from '@mui/material';
 // components
 import Iconify from '../../components/Iconify';
 //
@@ -55,8 +55,26 @@ export default function DashboardNavbar({ onOpenSidebar }) {
         <Box sx={{ flexGrow: 1 }} />
 
         <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
-          <LanguagePopover />
-          <NotificationsPopover />
+          {/* <LanguagePopover /> */}
+          {/* <NotificationsPopover /> */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Iconify icon="mdi:pokeball" sx={{ color: 'darkgrey' }} />
+            <Typography color="darkgrey" variant="caption">
+              5
+            </Typography>
+          </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Iconify icon="ic:twotone-catching-pokemon" sx={{ color: 'darkgrey' }} />
+            <Typography color="darkgrey" variant="caption">
+              500
+            </Typography>
+          </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Iconify icon="ic:sharp-catching-pokemon" sx={{ color: 'darkgrey' }} />
+            <Typography color="darkgrey" variant="caption">
+              5
+            </Typography>
+          </Box>
           <AccountPopover />
         </Stack>
       </ToolbarStyle>
